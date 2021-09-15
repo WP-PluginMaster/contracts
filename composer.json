@@ -1,0 +1,32 @@
+{
+  "name": "plugin-master/contracts",
+  "description": "The PluginMaster Contracts package.",
+  "license": "MIT",
+  "homepage": "https://wppluginmaster.com",
+  "support": {
+    "issues": "https://github.com/WP-Plugin-Master/PluginMaster/issues",
+    "source": "https://github.com/WP-Plugin-Master/PluginMaster"
+  },
+  "authors": [
+    {
+      "name": "AL EMRAN",
+      "email": "emrancu1@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0|^8.0",
+    "psr/container": "^1.0",
+    "ext-json": "*",
+    "plugin-master/request": "^1.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "PluginMaster\\Contracts\\": ""
+    }
+  },
+  "autoload-dev": {},
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
