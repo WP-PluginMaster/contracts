@@ -1,4 +1,5 @@
 <?php
+
 namespace PluginMaster\Contracts\Middleware;
 
 interface Middleware

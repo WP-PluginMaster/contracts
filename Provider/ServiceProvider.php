@@ -1,4 +1,5 @@
 <?php
+
 namespace PluginMaster\Contracts\Provider;
 
 interface ServiceProvider

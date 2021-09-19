@@ -22,5 +22,5 @@ interface SideMenuHandler
 
     public function addSubMenuPage( $slug, $options, $parentSlug = null );
 
-    public  function validateOptions( $options, $parent = true );
+    public function validateOptions( $options, $parent = true );
 }

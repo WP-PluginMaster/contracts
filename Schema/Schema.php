@@ -11,7 +11,7 @@ interface Schema
      * @param $closure
      * @return mixed
      */
-    public static function create($table, $closure);
+    public static function create( $table, $closure );
 
     /**
      * @param $column
@@ -19,27 +19,27 @@ interface Schema
      * @param int $places
      * @return mixed
      */
-    public function decimal($column, $length, $places);
+    public function decimal( $column, $length, $places );
 
     /**
      * @param $column
      * @param $values
      * @return mixed
      */
-    public function enum($column, $values);
+    public function enum( $column, $values );
 
     /**
      * @param $column
      * @return mixed
      */
-    public function intIncrements($column);
+    public function intIncrements( $column );
 
     /**
      * @param $column
      * @param int $length
      * @return mixed
      */
-    public function integer($column, $length);
+    public function integer( $column, $length );
 
     /**
      * @return mixed
@@ -50,7 +50,7 @@ interface Schema
      * @param $columnData
      * @return mixed
      */
-    public function updateColumn($columnData);
+    public function updateColumn( $columnData );
 
     /**
      * @return mixed
@@ -66,39 +66,39 @@ interface Schema
      * @param $column
      * @return mixed
      */
-    public function bigIntIncrements($column);
+    public function bigIntIncrements( $column );
 
     /**
      * @param $column
      * @param int $length
      * @return mixed
      */
-    public function bigInt($column, $length);
+    public function bigInt( $column, $length );
 
     /**
      * @param $column
      * @param int $length
      * @return mixed
      */
-    public function string($column, $length);
+    public function string( $column, $length );
 
     /**
      * @param $column
      * @return mixed
      */
-    public function text($column);
+    public function text( $column );
 
     /**
      * @param $column
      * @return mixed
      */
-    public function date($column);
+    public function date( $column );
 
     /**
      * @param $column
      * @return mixed
      */
-    public function timestamp($column);
+    public function timestamp( $column );
 
     /**
      * @return mixed
@@ -109,7 +109,7 @@ interface Schema
      * @param $value
      * @return mixed
      */
-    public function default($value);
+    public function default( $value );
 
     /**
      * @return mixed
@@ -120,13 +120,13 @@ interface Schema
      * @param $column
      * @return mixed
      */
-    public function foreign($column);
+    public function foreign( $column );
 
     /**
      * @param $reference
      * @return mixed
      */
-    public function on($reference);
+    public function on( $reference );
 
 
 }
