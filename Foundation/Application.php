@@ -75,7 +75,7 @@ interface Application
      *
      * @return string
      */
-    public function shortCodePath();
+    public function hooksPath();
 
 
     /**
