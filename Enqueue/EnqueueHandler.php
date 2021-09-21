@@ -19,10 +19,10 @@ interface EnqueueHandler
 
     public function initEnqueue( $admin = true );
 
-    public function localizeScriptInit( $id, $objectName, $data );
+    public function localizeScript( $id, $objectName, $data );
 
-    public function inlineScriptInit( $data, $option );
+    public function inlineScript( $data, $option );
 
-    public function inlineStyleInit( $data, $handle );
+    public function inlineStyle( $data, $handle );
 
 }
