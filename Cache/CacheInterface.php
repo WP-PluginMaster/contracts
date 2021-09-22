@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Cache;
 
-interface Cache
+interface CacheInterface
 {
 
     public static function get( $fileName, $directory = null );

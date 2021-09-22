@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Enqueue;
 
 
-interface EnqueueHandler
+interface EnqueueHandlerInterface
 {
 
     public function setAppInstance( $app );

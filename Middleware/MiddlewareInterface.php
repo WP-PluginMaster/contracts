@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Middleware;
 
-interface Middleware
+interface MiddlewareInterface
 {
     public function handler( \WP_REST_Request $request );
 }

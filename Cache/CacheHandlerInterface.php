@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Cache;
 
-interface CacheHandler
+interface CacheHandlerInterface
 {
 
     public function createFile( $fileName, $content, $directory = null );

@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Action;
 
-interface ActionHandler
+interface ActionHandlerInterface
 {
     public function setAppInstance( $instance );
 

@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Api;
 
 
-interface ApiHandler
+interface ApiHandlerInterface
 {
 
     public function setAppInstance( $instance );

@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Foundation;
 
-interface Application
+interface ApplicationInterface
 {
 
     /**

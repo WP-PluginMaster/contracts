@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Session;
 
-interface Session
+interface SessionInterface
 {
 
     public static function destroyFlush();

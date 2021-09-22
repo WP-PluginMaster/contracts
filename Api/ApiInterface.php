@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Api;
 
 
-interface Api
+interface ApiInterface
 {
 
     public static function group( $config, $callback );

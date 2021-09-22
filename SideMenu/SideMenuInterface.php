@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\SideMenu;
 
 
-interface SideMenu
+interface SideMenuInterface
 {
     public static function parent( $slug, $options, $callback = null );
 

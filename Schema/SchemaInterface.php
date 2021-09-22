@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Schema;
 
 
-interface Schema
+interface SchemaInterface
 {
     /**
      * @param $table

@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\DB;
 
 
-interface DB
+interface DBInterface
 {
     /**
      * @param $name

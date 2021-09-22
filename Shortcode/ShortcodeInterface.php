@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Shortcode;
 
 
-interface Shortcode
+interface ShortcodeInterface
 {
 
     public static function add( $name, $callback );

@@ -6,7 +6,7 @@ namespace PluginMaster\Contracts\Validator;
 
 use PluginMaster\Request\Request;
 
-interface Validator
+interface ValidatorInterface
 {
     /**
      * @param $request

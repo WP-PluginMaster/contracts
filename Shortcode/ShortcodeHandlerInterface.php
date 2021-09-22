@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Shortcode;
 
-interface ShortcodeHandler
+interface ShortcodeHandlerInterface
 {
     public function setAppInstance( $instance );
 

@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Enqueue;
 
 
-interface Enqueue
+interface EnqueueInterface
 {
 
     public static function front();

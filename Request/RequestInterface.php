@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\Request;
 
 
-interface Request
+interface RequestInterface
 {
     public function all();
 

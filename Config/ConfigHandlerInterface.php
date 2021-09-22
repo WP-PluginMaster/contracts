@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Config;
 
-interface ConfigHandler
+interface ConfigHandlerInterface
 {
     public function setPath( $path );
 

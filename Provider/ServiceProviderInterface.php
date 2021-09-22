@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Provider;
 
-interface ServiceProvider
+interface ServiceProviderInterface
 {
 
     public function boot();

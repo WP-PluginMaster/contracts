@@ -4,7 +4,7 @@
 namespace PluginMaster\Contracts\SideMenu;
 
 
-interface SideMenuHandler
+interface SideMenuHandlerInterface
 {
     public function setAppInstance( $instance );
 

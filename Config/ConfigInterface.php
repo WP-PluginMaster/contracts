@@ -2,7 +2,7 @@
 
 namespace PluginMaster\Contracts\Config;
 
-interface Config
+interface ConfigInterface
 {
     public static function get( $key );
 

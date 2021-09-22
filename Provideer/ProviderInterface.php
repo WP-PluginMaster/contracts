@@ -1,7 +1,7 @@
 <?php
 
 
-interface Provider
+interface ProviderInterface
 {
 
     public function boot();
