@@ -128,5 +128,15 @@ interface SchemaInterface
      */
     public function on( $reference );
 
+    /**
+     * @return mixed
+     */
+    public function getSql();
+
+    /**
+     * @param $sql
+     * @return mixed
+     */
+    public static function rawSql( $sql );
 
 }
