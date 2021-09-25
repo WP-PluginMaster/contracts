@@ -134,6 +134,12 @@ interface SchemaInterface
     public function getSql();
 
     /**
+     * @return mixed
+     */
+    public function execute();
+
+
+    /**
      * @param $sql
      * @return mixed
      */
