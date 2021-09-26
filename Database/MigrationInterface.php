@@ -5,6 +5,6 @@ namespace PluginMaster\Contracts\Database;
 interface MigrationInterface
 {
 
-    public function handler();
+    public static function handler();
 
 }
