@@ -45,7 +45,7 @@ interface ApplicationInterface
      *
      * @return string
      */
-    public function resourcePath();
+    public function viewPath();
 
     /**
      * Get the path to the enqueue directory.
