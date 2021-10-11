@@ -9,6 +9,8 @@ interface EnqueueInterface
 
     public static function front();
 
+    public static function after($hook);
+
     public static function admin();
 
     public function headerScript( $path, $options = [] );

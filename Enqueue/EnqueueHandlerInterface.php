@@ -11,13 +11,9 @@ interface EnqueueHandlerInterface
 
     public function loadEnqueueFile( $enqueueFile );
 
-    public function addAdminEnqueues();
+    public function register( $config );
 
-    public function addFrontEnqueues();
-
-    public function register( $data, $admin = false, $type = '' );
-
-    public function initEnqueue( $admin = true );
+    public function initEnqueue();
 
     public function localizeScript( $id, $objectName, $data );
 
