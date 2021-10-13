@@ -10,40 +10,40 @@ interface DBInterface
      * @param $name
      * @return mixed
      */
-    static public function table( $name );
+    static public function table($name);
 
 
     /**
      * @param $closer
      * @return mixed
      */
-    static public function transaction( $closer );
+    static public function transaction($closer);
 
     /**
      * @param $column
-     * @param null $operator
-     * @param null $value
+     * @param  null  $operator
+     * @param  null  $value
      * @return mixed
      */
-    public function where( $column, $operator = null, $value = null );
+    public function where($column, $operator = null, $value = null);
 
     /**
      * @param $table
      * @param $first
-     * @param null $operator
-     * @param null $second
+     * @param  null  $operator
+     * @param  null  $second
      * @return mixed
      */
-    public function join( $table, $first, $operator = null, $second = null );
+    public function join($table, $first, $operator = null, $second = null);
 
     /**
      * @param $table
      * @param $first
-     * @param null $operator
-     * @param null $second
+     * @param  null  $operator
+     * @param  null  $second
      * @return mixed
      */
-    public function leftJoin( $table, $first, $operator = null, $second = null );
+    public function leftJoin($table, $first, $operator = null, $second = null);
 
     /**
      * @param $first
@@ -51,7 +51,7 @@ interface DBInterface
      * @param $second
      * @return mixed
      */
-    public function on( $first, $operator, $second );
+    public function on($first, $operator, $second);
 
     /**
      * @param $first
@@ -59,69 +59,69 @@ interface DBInterface
      * @param $second
      * @return mixed
      */
-    public function orOn( $first, $operator, $second );
+    public function orOn($first, $operator, $second);
 
     /**
      * @param $column
-     * @param null $operator
-     * @param null $value
+     * @param  null  $operator
+     * @param  null  $value
      * @return mixed
      */
-    public function onWhere( $column, $operator = null, $value = null );
+    public function onWhere($column, $operator = null, $value = null);
 
     /**
      * @param $column
-     * @param null $operator
-     * @param null $value
+     * @param  null  $operator
+     * @param  null  $value
      * @return mixed
      */
-    public function orWhere( $column, $operator = null, $value = null );
+    public function orWhere($column, $operator = null, $value = null);
 
     /**
      * @param $columns
      * @param $direction
      * @return mixed
      */
-    public function orderBy( $columns, $direction );
+    public function orderBy($columns, $direction);
 
 
     /**
      * @param $number
      * @return mixed
      */
-    public function limit( $number );
+    public function limit($number);
 
 
     /**
      * @param $number
      * @return mixed
      */
-    public function offset( $number );
+    public function offset($number);
 
 
     /**
      * @param $number
      * @return mixed
      */
-    public function groupBy( $number );
+    public function groupBy($number);
 
     /**
      * @param $fields
      * @return mixed
      */
-    public function select( $fields );
+    public function select($fields);
 
     /**
      * @param $data
      * @return mixed
      */
-    public function insert( $data );
+    public function insert($data);
 
     /**
      * @param $data
      * @return mixed
      */
-    public function update( $data );
+    public function update($data);
 
 
     /**

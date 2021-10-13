@@ -11,35 +11,41 @@ interface SchemaInterface
      * @param $closure
      * @return mixed
      */
-    public static function create( $table, $closure );
+    public static function create($table, $closure);
+
+    /**
+     * @param $sql
+     * @return mixed
+     */
+    public static function rawSql($sql);
 
     /**
      * @param $column
-     * @param int $length
-     * @param int $places
+     * @param  int  $length
+     * @param  int  $places
      * @return mixed
      */
-    public function decimal( $column, $length, $places );
+    public function decimal($column, $length, $places);
 
     /**
      * @param $column
      * @param $values
      * @return mixed
      */
-    public function enum( $column, $values );
+    public function enum($column, $values);
 
     /**
      * @param $column
      * @return mixed
      */
-    public function intIncrements( $column );
+    public function intIncrements($column);
 
     /**
      * @param $column
-     * @param int $length
+     * @param  int  $length
      * @return mixed
      */
-    public function integer( $column, $length );
+    public function integer($column, $length);
 
     /**
      * @return mixed
@@ -50,7 +56,7 @@ interface SchemaInterface
      * @param $columnData
      * @return mixed
      */
-    public function updateColumn( $columnData );
+    public function updateColumn($columnData);
 
     /**
      * @return mixed
@@ -66,39 +72,39 @@ interface SchemaInterface
      * @param $column
      * @return mixed
      */
-    public function bigIntIncrements( $column );
+    public function bigIntIncrements($column);
 
     /**
      * @param $column
-     * @param int $length
+     * @param  int  $length
      * @return mixed
      */
-    public function bigInt( $column, $length );
+    public function bigInt($column, $length);
 
     /**
      * @param $column
-     * @param int $length
+     * @param  int  $length
      * @return mixed
      */
-    public function string( $column, $length );
-
-    /**
-     * @param $column
-     * @return mixed
-     */
-    public function text( $column );
+    public function string($column, $length);
 
     /**
      * @param $column
      * @return mixed
      */
-    public function date( $column );
+    public function text($column);
 
     /**
      * @param $column
      * @return mixed
      */
-    public function timestamp( $column );
+    public function date($column);
+
+    /**
+     * @param $column
+     * @return mixed
+     */
+    public function timestamp($column);
 
     /**
      * @return mixed
@@ -109,7 +115,7 @@ interface SchemaInterface
      * @param $value
      * @return mixed
      */
-    public function default( $value );
+    public function default($value);
 
     /**
      * @return mixed
@@ -120,13 +126,13 @@ interface SchemaInterface
      * @param $column
      * @return mixed
      */
-    public function foreign( $column );
+    public function foreign($column);
 
     /**
      * @param $reference
      * @return mixed
      */
-    public function on( $reference );
+    public function on($reference);
 
     /**
      * @return mixed
@@ -137,12 +143,5 @@ interface SchemaInterface
      * @return mixed
      */
     public function execute();
-
-
-    /**
-     * @param $sql
-     * @return mixed
-     */
-    public static function rawSql( $sql );
 
 }
