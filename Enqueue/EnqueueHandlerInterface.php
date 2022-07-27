@@ -4,21 +4,23 @@
 namespace PluginMaster\Contracts\Enqueue;
 
 
+use PluginMaster\Contracts\Foundation\ApplicationInterface;
+
 interface EnqueueHandlerInterface
 {
 
-    public function setAppInstance($app);
+    public function setAppInstance(ApplicationInterface $app): EnqueueHandlerInterface;
 
-    public function loadEnqueueFile($enqueueFile);
+    public function loadEnqueueFile(string $enqueueFile);
 
-    public function register($config);
+    public function register(array $config): void;
 
-    public function initEnqueue();
+    public function initEnqueue(): void;
 
-    public function localizeScript($id, $objectName, $data);
+    public function localizeScript(string $id, string $objectName, array $data): void;
 
-    public function inlineScript($data, $option);
+    public function inlineScript(string $data, array $option): void;
 
-    public function inlineStyle($data, $handle);
+    public function inlineStyle(string $data, string $handle): void;
 
 }

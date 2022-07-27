@@ -2,11 +2,13 @@
 
 namespace PluginMaster\Contracts\Action;
 
+use PluginMaster\Contracts\Foundation\ApplicationInterface;
+
 interface ActionHandlerInterface
 {
-    public function setAppInstance($instance);
+    public function setAppInstance(ApplicationInterface $instance): ActionHandlerInterface ;
 
-    public function setControllerNamespace($namespace);
+    public function setControllerNamespace(string $namespace): ActionHandlerInterface ;
 
-    public function add($name, $callback);
+    public function add(string $name, $callback, int $priority = 10): void ;
 }

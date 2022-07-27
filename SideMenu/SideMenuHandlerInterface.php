@@ -4,21 +4,23 @@
 namespace PluginMaster\Contracts\SideMenu;
 
 
+use PluginMaster\Contracts\Foundation\ApplicationInterface;
+
 interface SideMenuHandlerInterface
 {
-    public function setAppInstance($instance);
+    public function setAppInstance(ApplicationInterface $instance): SideMenuHandlerInterface;
 
-    public function setNamespace($namespace);
+    public function setNamespace(string $namespace): SideMenuHandlerInterface;
 
-    public function loadMenuFile($sidemenu);
+    public function loadMenuFile(string $sidemenu): SideMenuHandlerInterface;
 
-    public function addMenuPage($slug, $options);
+    public function addMenuPage(string $slug, array $options): void;
 
-    public function registerParentMenu($options, $slug);
+    public function registerParentMenu(array $options, string $slug): void;
 
-    public function removeFirstSubMenu();
+    public function removeFirstSubMenu(): void;
 
-    public function addSubMenuPage($slug, $options, $parentSlug = null);
+    public function addSubMenuPage(string $slug, array $options, string $parentSlug = ''): void;
 
-    public function validateOptions($options, $parent = true);
+    public function validateOptions(array $options, bool $parent = true): void;
 }

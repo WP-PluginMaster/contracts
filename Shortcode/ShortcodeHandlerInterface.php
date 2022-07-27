@@ -2,11 +2,13 @@
 
 namespace PluginMaster\Contracts\Shortcode;
 
+use PluginMaster\Contracts\Foundation\ApplicationInterface;
+
 interface ShortcodeHandlerInterface
 {
-    public function setAppInstance($instance);
+    public function setAppInstance(ApplicationInterface $instance): ShortcodeHandlerInterface;
 
-    public function setControllerNamespace($namespace);
+    public function setControllerNamespace(string $namespace): ShortcodeHandlerInterface;
 
-    public function add($name, $callback);
+    public function add(string $name, $callback): void;
 }

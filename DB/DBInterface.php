@@ -144,6 +144,5 @@ interface DBInterface
      */
     public function toSql();
 
-
 }
 

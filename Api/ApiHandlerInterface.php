@@ -4,25 +4,28 @@
 namespace PluginMaster\Contracts\Api;
 
 
+use PluginMaster\Contracts\Foundation\ApplicationInterface;
+use WP_REST_Request;
+
 interface ApiHandlerInterface
 {
 
-    public function setAppInstance($instance);
+    public function setAppInstance(ApplicationInterface $instance): ApiHandlerInterface;
 
-    public function setNamespace($namespace);
+    public function setNamespace(string $namespace): ApiHandlerInterface;
 
-    public function setMiddleware($list);
+    public function setMiddleware(array $list): ApiHandlerInterface;
 
-    public function setControllerNamespace($namespace);
+    public function setControllerNamespace(string $namespace): ApiHandlerInterface;
 
-    public function loadRoutes($routes);
+    public function loadRoutes(string $routes): ApiHandlerInterface;
 
-    public function register($api, $dynamicRoute = false);
+    public function register(array $api, bool $dynamicRoute = false): void ;
 
-    public function apiGenerate();
+    public function apiGenerate(): void ;
 
-    public function resolveDynamicCallback($request);
+    public function resolveDynamicCallback(WP_REST_Request $request);
 
-    public function check_permission();
+    public function check_permission(): bool ;
 
 }
