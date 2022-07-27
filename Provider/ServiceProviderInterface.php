@@ -4,8 +4,6 @@ namespace PluginMaster\Contracts\Provider;
 
 interface ServiceProviderInterface
 {
-
-    public function boot();
-
+    public function boot(): void;
 
 }

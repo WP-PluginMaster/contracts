@@ -4,14 +4,13 @@ namespace PluginMaster\Contracts\Session;
 
 interface SessionInterface
 {
+    public static function destroyFlush(): void;
 
-    public static function destroyFlush();
+    public static function flush(string $key, ?string $message = null): void;
 
-    public static function flush($key, $message = null);
+    public static function set(string $name, mixed $message): void;
 
-    public static function set($name, $message);
+    public static function get(string $key): mixed;
 
-    public static function get($key);
-
-    public static function forget($key);
+    public static function forget(string $key): void;
 }

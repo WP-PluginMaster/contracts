@@ -8,11 +8,11 @@ use PluginMaster\Contracts\Foundation\ApplicationInterface;
 
 interface SideMenuHandlerInterface
 {
-    public function setAppInstance(ApplicationInterface $instance): SideMenuHandlerInterface;
+    public function setAppInstance(ApplicationInterface $instance): self;
 
-    public function setNamespace(string $namespace): SideMenuHandlerInterface;
+    public function setNamespace(string $namespace): self;
 
-    public function loadMenuFile(string $sidemenu): SideMenuHandlerInterface;
+    public function loadMenuFile(string $sidemenu): self;
 
     public function addMenuPage(string $slug, array $options): void;
 

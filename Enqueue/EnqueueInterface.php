@@ -7,28 +7,28 @@ namespace PluginMaster\Contracts\Enqueue;
 interface EnqueueInterface
 {
 
-    public static function front();
+    public static function front(): self;
 
-    public static function on($hook);
+    public static function on(string $hook): self;
 
-    public static function admin();
+    public static function admin(): self;
 
-    public function headerScript($path, $options = []);
+    public function headerScript(string $path, array $options = []): void;
 
-    public function headerScriptCdn($path, $options = []);
+    public function headerScriptCdn(string $path, array $options = []): void;
 
-    public function footerScript($path, $options = []);
+    public function footerScript(string $path, array $options = []): void;
 
-    public function footerScriptCdn($path, $options = []);
+    public function footerScriptCdn(string $path, array $options = []): void;
 
-    public function style($path, $options = []);
+    public function style(string $path, array $options = []): void;
 
-    public function styleCdn($path, $options = []);
+    public function styleCdn(string $path, array $options = []): void;
 
-    public function localizeScript($handle, $objectName, $data);
+    public function localizeScript(string $handle, string $objectName, mixed $data): void;
 
-    public function inlineScript($data, $option = []);
+    public function inlineScript(string $data, array $option = []): void;
 
-    public function inlineStyle($data, $handle = '');
+    public function inlineStyle(string $data, string $handle = ''): void;
 
 }

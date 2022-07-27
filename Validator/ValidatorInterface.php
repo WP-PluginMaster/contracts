@@ -9,20 +9,20 @@ use PluginMaster\Request\Request;
 interface ValidatorInterface
 {
     /**
-     * @param $request
+     * @param  Request  $request
      * @param $validatorData
-     * @return mixed
+     * @return self
      */
-    static public function make(Request $request, $validatorData);
+    static public function make(Request $request, $validatorData): self;
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function fails();
+    public function fails(): bool;
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function errors();
+    public function errors(): array;
 
 }

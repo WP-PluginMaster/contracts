@@ -4,6 +4,6 @@
 interface ProviderInterface
 {
 
-    public function boot();
+    public function boot(): void;
 
 }

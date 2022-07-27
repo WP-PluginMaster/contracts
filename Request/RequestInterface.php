@@ -6,13 +6,13 @@ namespace PluginMaster\Contracts\Request;
 
 interface RequestInterface
 {
-    public function all();
+    public function all(): array;
 
-    public function get($property);
+    public function get(string $key): mixed;
 
-    public function isMethod($method);
+    public function isMethod(string $method): bool;
 
-    public function header($key);
+    public function header(string $key): mixed;
 
-    public function url();
+    public function url(): string;
 }

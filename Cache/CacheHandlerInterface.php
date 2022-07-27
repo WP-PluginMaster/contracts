@@ -5,18 +5,18 @@ namespace PluginMaster\Contracts\Cache;
 interface CacheHandlerInterface
 {
 
-    public function createFile(string $fileName, string $content, string $directory = '');
+    public function createFile(string $fileName, string $content, string $directory = ''): int|false;
 
-    public function cacheFilePath(string $fileName, string $directory = ''):string;
+    public function cacheFilePath(string $fileName, string $directory = ''): string;
 
-    public function check(string $fileName, string $directory = ''): bool ;
+    public function check(string $fileName, string $directory = ''): bool;
 
-    public function reset(string $fileName = ''): bool ;
+    public function reset(string $fileName = ''): bool;
 
-    public function setAppVersion(string $instance): CacheHandlerInterface;
+    public function setAppVersion(string $instance): self;
 
-    public function setCachePath(string $path): CacheHandlerInterface;
+    public function setCachePath(string $path): self;
 
-    public function get(string $fileName, string $directory = ''): string ;
+    public function get(string $fileName, string $directory = ''): string;
 
 }

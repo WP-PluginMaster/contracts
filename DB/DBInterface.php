@@ -4,145 +4,152 @@
 namespace PluginMaster\Contracts\DB;
 
 
+use Closure;
+
 interface DBInterface
 {
     /**
-     * @param $name
-     * @return mixed
+     * @param  string  $name
+     * @return self
      */
-    static public function table($name);
+    static public function table(string $name): self;
 
 
     /**
-     * @param $closer
-     * @return mixed
+     * @param  Closure  $closer
+     * @return ?self
      */
-    static public function transaction($closer);
+    static public function transaction(Closure $closer): ?self;
 
     /**
-     * @param $column
-     * @param  null  $operator
+     * @param  string|Closure  $column
+     * @param  string|null  $operator
      * @param  null  $value
-     * @return mixed
+     * @return self
      */
-    public function where($column, $operator = null, $value = null);
+    public function where(string|Closure $column, ?string $operator = null, mixed $value = null): self;
 
     /**
-     * @param $table
-     * @param $first
-     * @param  null  $operator
-     * @param  null  $second
+     * @param  string  $table
+     * @param  string|Closure  $first
+     * @param  string|null  $operator
+     * @param  string|null  $second
      * @return mixed
      */
-    public function join($table, $first, $operator = null, $second = null);
+    public function join(string $table, string|Closure $first, ?string $operator = null, ?string $second = null): self;
 
     /**
-     * @param $table
-     * @param $first
-     * @param  null  $operator
-     * @param  null  $second
-     * @return mixed
+     * @param  string  $table
+     * @param  string|Closure  $first
+     * @param  string|null  $operator
+     * @param  string|null  $second
+     * @return self
      */
-    public function leftJoin($table, $first, $operator = null, $second = null);
+    public function leftJoin(
+        string $table,
+        string|Closure $first,
+        ?string $operator = null,
+        ?string $second = null
+    ): self;
 
     /**
-     * @param $first
-     * @param $operator
-     * @param $second
-     * @return mixed
+     * @param  string  $first
+     * @param  string  $operator
+     * @param  string  $second
+     * @return self
      */
-    public function on($first, $operator, $second);
+    public function on(string $first, string $operator, string $second): self;
 
     /**
-     * @param $first
-     * @param $operator
-     * @param $second
-     * @return mixed
+     * @param  string  $first
+     * @param  string  $operator
+     * @param  string  $second
+     * @return self
      */
-    public function orOn($first, $operator, $second);
+    public function orOn(string $first, string $operator, string $second): self;
 
     /**
-     * @param $column
-     * @param  null  $operator
+     * @param  string  $column
+     * @param  string|null  $operator
      * @param  null  $value
-     * @return mixed
+     * @return self
      */
-    public function onWhere($column, $operator = null, $value = null);
+    public function onWhere(string $column, ?string $operator = null, mixed $value = null): self;
 
     /**
-     * @param $column
-     * @param  null  $operator
+     * @param  string|Closure  $column
+     * @param  string|null  $operator
      * @param  null  $value
-     * @return mixed
+     * @return self
      */
-    public function orWhere($column, $operator = null, $value = null);
+    public function orWhere(string|Closure $column, ?string $operator = null, mixed $value = null): self;
 
     /**
-     * @param $columns
-     * @param $direction
-     * @return mixed
+     * @param  string  $columns
+     * @param  string  $direction
+     * @return self
      */
-    public function orderBy($columns, $direction);
-
-
-    /**
-     * @param $number
-     * @return mixed
-     */
-    public function limit($number);
+    public function orderBy(string $columns, string $direction): self;
 
 
     /**
-     * @param $number
-     * @return mixed
+     * @param  string|int  $number
+     * @return self
      */
-    public function offset($number);
+    public function limit(string|int $number): self;
 
 
     /**
-     * @param $number
-     * @return mixed
+     * @param  string|int  $number
+     * @return self
      */
-    public function groupBy($number);
-
-    /**
-     * @param $fields
-     * @return mixed
-     */
-    public function select($fields);
-
-    /**
-     * @param $data
-     * @return mixed
-     */
-    public function insert($data);
-
-    /**
-     * @param $data
-     * @return mixed
-     */
-    public function update($data);
+    public function offset(string|int $number): self;
 
 
     /**
-     * @return mixed
+     * @param  string|int  $column
+     * @return self
      */
-    public function delete();
+    public function groupBy(string|int $column): self;
 
     /**
-     * @return mixed
+     * @param  string  $fields
+     * @return self
      */
-    public function first();
+    public function select(string $fields): self;
 
     /**
-     * @return mixed
+     * @param  array  $data
+     * @return int|null
      */
-    public function get();
+    public function insert(array $data): ?int;
 
     /**
-     * @return mixed
+     * @param  array  $data
+     * @return bool|int|null
      */
-    public function toSql();
+    public function update(array $data): bool|int|null;
+
+
+    /**
+     * @return bool|int|null
+     */
+    public function delete(): bool|int|null;
+
+    /**
+     * @return object|null
+     */
+    public function first(): object|null;
+
+    /**
+     * @return array|object|null
+     */
+    public function get(): array|object|null;
+
+    /**
+     * @return string
+     */
+    public function toSql(): string;
 
 }
 

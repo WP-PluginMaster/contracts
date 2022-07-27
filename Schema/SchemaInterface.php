@@ -4,144 +4,141 @@
 namespace PluginMaster\Contracts\Schema;
 
 
+use Closure;
+
 interface SchemaInterface
 {
     /**
-     * @param $table
-     * @param $closure
-     * @return mixed
+     * @param  string  $table
+     * @param  Closure  $closure
+     * @return self
      */
-    public static function create($table, $closure);
+    public static function create(string $table, Closure $closure): self;
 
     /**
-     * @param $sql
-     * @return mixed
+     * @param  string  $sql
+     * @return self
      */
-    public static function rawSql($sql);
+    public static function rawSql(string $sql): self;
 
     /**
-     * @param $column
-     * @param  int  $length
-     * @param  int  $places
-     * @return mixed
+     * @param  string  $column
+     * @param  string|int  $length
+     * @param  string|int  $places
+     * @return self
      */
-    public function decimal($column, $length, $places);
+    public function decimal(string $column, string|int $length, string|int $places): self;
 
     /**
-     * @param $column
-     * @param $values
-     * @return mixed
+     * @param  string  $column
+     * @param  array  $values
+     * @return self
      */
-    public function enum($column, $values);
+    public function enum(string $column, array $values): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function intIncrements($column);
+    public function intIncrements(string $column): self;
 
     /**
-     * @param $column
-     * @param  int  $length
-     * @return mixed
+     * @param  string  $column
+     * @param  string|int  $length
+     * @return self
      */
-    public function integer($column, $length);
+    public function integer(string $column, string|int $length): self;
 
     /**
-     * @return mixed
+     * @return self
      */
-    public function increment();
+    public function increment(): self;
+
 
     /**
-     * @param $columnData
-     * @return mixed
+     * @return self
      */
-    public function updateColumn($columnData);
+    public function unsigned(): self;
 
     /**
-     * @return mixed
+     * @return self
      */
-    public function unsigned();
+    public function primaryKey(): self;
 
     /**
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function primaryKey();
+    public function bigIntIncrements(string $column): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @param  string  $column
+     * @param  string|int  $length
+     * @return self
      */
-    public function bigIntIncrements($column);
+    public function bigInt(string $column, string|int $length): self;
 
     /**
-     * @param $column
-     * @param  int  $length
-     * @return mixed
+     * @param  string  $column
+     * @param  int|string  $length
+     * @return self
      */
-    public function bigInt($column, $length);
+    public function string(string $column, int|string $length): self;
 
     /**
-     * @param $column
-     * @param  int  $length
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function string($column, $length);
+    public function text(string $column): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function text($column);
+    public function date(string $column): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function date($column);
+    public function timestamp(string $column): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @return self
      */
-    public function timestamp($column);
+    public function nullable(): self;
 
     /**
-     * @return mixed
+     * @param  mixed  $value
+     * @return self
      */
-    public function nullable();
+    public function default(mixed $value): self;
 
     /**
-     * @param $value
-     * @return mixed
+     * @return self
      */
-    public function default($value);
+    public function onUpdateTimeStamp(): self;
 
     /**
-     * @return mixed
+     * @param  string  $column
+     * @return self
      */
-    public function onUpdateTimeStamp();
+    public function foreign(string $column): self;
 
     /**
-     * @param $column
-     * @return mixed
+     * @param  string  $reference
+     * @return self
      */
-    public function foreign($column);
+    public function on(string $reference): self;
 
     /**
-     * @param $reference
-     * @return mixed
+     * @return string
      */
-    public function on($reference);
+    public function getSql(): string;
 
     /**
-     * @return mixed
+     * @return void
      */
-    public function getSql();
-
-    /**
-     * @return mixed
-     */
-    public function execute();
+    public function execute(): void;
 
 }
