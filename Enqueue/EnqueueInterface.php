@@ -6,7 +6,6 @@ namespace PluginMaster\Contracts\Enqueue;
 
 interface EnqueueInterface
 {
-
     public static function front(): self;
 
     public static function on(string $hook): self;
@@ -25,10 +24,9 @@ interface EnqueueInterface
 
     public function styleCdn(string $path, array $options = []): void;
 
-    public function localizeScript(string $handle, string $objectName, mixed $data): void;
+    public function localizeScript(string $handle, string $objectName, $data): void;
 
     public function inlineScript(string $data, array $option = []): void;
 
     public function inlineStyle(string $data, string $handle = ''): void;
-
 }

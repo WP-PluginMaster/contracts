@@ -9,7 +9,6 @@ use WP_REST_Request;
 
 interface ApiHandlerInterface
 {
-
     public function setAppInstance(ApplicationInterface $instance): self;
 
     public function setNamespace(string $namespace): self;

@@ -4,8 +4,7 @@ namespace PluginMaster\Contracts\Config;
 
 interface ConfigHandlerInterface
 {
-    public function setPath(string $path): string;
+    public function setPath(string $path): void;
 
-    public function resolveData(string $key): mixed;
-
+    public function resolveData(string $key);
 }

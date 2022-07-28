@@ -1,8 +1,6 @@
 <?php
 
-
 namespace PluginMaster\Contracts\Schema;
-
 
 use Closure;
 
@@ -23,11 +21,11 @@ interface SchemaInterface
 
     /**
      * @param  string  $column
-     * @param  string|int  $length
-     * @param  string|int  $places
+     * @param  int  $length
+     * @param  int  $places
      * @return self
      */
-    public function decimal(string $column, string|int $length, string|int $places): self;
+    public function decimal(string $column, int $length, int $places): self;
 
     /**
      * @param  string  $column
@@ -44,10 +42,10 @@ interface SchemaInterface
 
     /**
      * @param  string  $column
-     * @param  string|int  $length
+     * @param  int  $length
      * @return self
      */
-    public function integer(string $column, string|int $length): self;
+    public function integer(string $column, int $length): self;
 
     /**
      * @return self
@@ -73,17 +71,17 @@ interface SchemaInterface
 
     /**
      * @param  string  $column
-     * @param  string|int  $length
+     * @param  int  $length
      * @return self
      */
-    public function bigInt(string $column, string|int $length): self;
+    public function bigInt(string $column, int $length): self;
 
     /**
      * @param  string  $column
-     * @param  int|string  $length
+     * @param  int  $length
      * @return self
      */
-    public function string(string $column, int|string $length): self;
+    public function string(string $column, int $length): self;
 
     /**
      * @param  string  $column
@@ -112,7 +110,7 @@ interface SchemaInterface
      * @param  mixed  $value
      * @return self
      */
-    public function default(mixed $value): self;
+    public function default($value): self;
 
     /**
      * @return self

@@ -4,7 +4,6 @@ namespace PluginMaster\Contracts\Foundation;
 
 interface ApplicationInterface
 {
-
     /**
      * Get the version number of the application.
      *
@@ -20,7 +19,7 @@ interface ApplicationInterface
     public function configPath(): string;
 
     /**
-     * Get the path to the resources directory.
+     * Get the path to the resources' directory.
      *
      * @return string
      */
@@ -32,5 +31,4 @@ interface ApplicationInterface
      * @return void
      */
     public function boot(): void;
-
 }

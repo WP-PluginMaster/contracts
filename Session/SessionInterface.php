@@ -6,11 +6,11 @@ interface SessionInterface
 {
     public static function destroyFlush(): void;
 
-    public static function flush(string $key, ?string $message = null): void;
+    public static function flush(string $key, $message = null): void;
 
-    public static function set(string $name, mixed $message): void;
+    public static function set(string $name, $message): void;
 
-    public static function get(string $key): mixed;
+    public static function get(string $key);
 
     public static function forget(string $key): void;
 }

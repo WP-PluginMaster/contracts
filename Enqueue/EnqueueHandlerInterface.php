@@ -8,7 +8,6 @@ use PluginMaster\Contracts\Foundation\ApplicationInterface;
 
 interface EnqueueHandlerInterface
 {
-
     public function setAppInstance(ApplicationInterface $app): self;
 
     public function loadEnqueueFile(string $enqueueFile): void;
