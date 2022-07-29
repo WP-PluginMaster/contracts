@@ -12,21 +12,29 @@ interface EnqueueInterface
 
     public static function admin(): self;
 
-    public function headerScript(string $path, array $options = []): void;
+    public function getData(): array;
 
-    public function headerScriptCdn(string $path, array $options = []): void;
+    public function script(string $path, ?string $id = null): self;
 
-    public function footerScript(string $path, array $options = []): void;
+    public function scriptCdn(string $cdnPath, ?string $id = null): self;
 
-    public function footerScriptCdn(string $path, array $options = []): void;
+    public function style(string $path, ?string $id = null, string $media = 'all'): self;
 
-    public function style(string $path, array $options = []): void;
-
-    public function styleCdn(string $path, array $options = []): void;
+    public function styleCdn(string $cdnPath, ?string $id = null): self;
 
     public function localizeScript(string $handle, string $objectName, $data): void;
 
     public function inlineScript(string $data, array $option = []): void;
 
     public function inlineStyle(string $data, string $handle = ''): void;
+
+    public function dependency(array $deps): self;
+
+    public function inHeader(): self;
+
+    public function inFooter(): self;
+
+    public function version(string $ver): self;
+
+    public function attributes(array $attributes): self;
 }

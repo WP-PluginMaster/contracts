@@ -31,4 +31,12 @@ interface ApplicationInterface
      * @return void
      */
     public function boot(): void;
+
+    /**
+     * Generate & Get instance from container.
+     *
+     * @param string $class
+     * @return void
+     */
+    public function get(string $class): object;
 }

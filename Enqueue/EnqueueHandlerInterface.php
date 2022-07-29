@@ -12,9 +12,9 @@ interface EnqueueHandlerInterface
 
     public function loadEnqueueFile(string $enqueueFile): void;
 
-    public function register(array $config): void;
+    public function register(array $config, string $hook): void;
 
-    public function initEnqueue(): void;
+    public function initEnqueue(EnqueueInterface $enqueue): void;
 
     public function localizeScript(string $id, string $objectName, array $data): void;
 
