@@ -12,8 +12,6 @@ interface EnqueueInterface
 
     public static function admin(): self;
 
-    public function getData(): array;
-
     public function script(string $path, ?string $id = null): self;
 
     public function scriptCdn(string $cdnPath, ?string $id = null): self;
