@@ -1,6 +1,5 @@
 <?php
 
-
 namespace PluginMaster\Contracts\SideMenu;
 
 
